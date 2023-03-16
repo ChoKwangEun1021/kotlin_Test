@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ECEAEA"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#FDF080"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnClick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/app_btn1" />
+
+        <Button
+            android:id="@+id/BUTTON13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:text="@string/app_btn2" />
+
+        <Button
+            android:id="@+id/BUTTON14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="button" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#F679A3"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/BUTTON15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="button" />
+
+        <Button
+            android:id="@+id/btnTarget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:text="@string/app_btn2"
+            android:visibility="invisible"/>
+
+        <Button
+            android:id="@+id/BUTTON17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="button" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#A8DFF8"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/BUTTON18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="button7" />
+
+        <Button
+            android:id="@+id/btnGone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:text="@string/app_btn3"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/BUTTON20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="button9" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:autoLink="email|phone|web"
+        android:text="네이버 http://www.naver.com 전화번호 +82-010-1234-5678 이메일 email@email.com 로 방문함" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:autoLink="email|phone|web"
+        android:text="@string/app_ellips"
+        android:singleLine="true"
+        android:ellipsize="middle"/>
+
+</LinearLayout>
