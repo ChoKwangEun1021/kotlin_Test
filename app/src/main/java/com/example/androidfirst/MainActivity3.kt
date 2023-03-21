@@ -2,31 +2,42 @@ package com.example.androidfirst
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import android.view.MotionEvent
+import android.widget.CompoundButton
 import android.widget.Toast
 import com.example.androidfirst.databinding.ActivityMain3Binding
-import kotlin.math.log
 
-class MainActivity3 : AppCompatActivity() {
+class MainActivity3 : AppCompatActivity(), CompoundButton.OnCheckedChangeListener {
     lateinit var binding: ActivityMain3Binding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMain3Binding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        binding.ckbClick.setOnCheckedChangeListener(this)
+        binding.ckbClick2.setOnCheckedChangeListener(this)
+
+        binding.ckbClick3.setOnCheckedChangeListener(object : CompoundButton.OnCheckedChangeListener{
+            override fun onCheckedChanged(buttonView: CompoundButton?, isChecked: Boolean) {
+                Toast.makeText(applicationContext,"3번",Toast.LENGTH_SHORT).show()
+            }
+
+        })
+
+        binding.ckbClick4.setOnCheckedChangeListener { buttonView, isChecked ->
+            Toast.makeText(applicationContext,"4번",Toast.LENGTH_SHORT).show()
+        }
     }
 
-    override fun onTouchEvent(event: MotionEvent?): Boolean {
-        when(event?.action){
-            MotionEvent.ACTION_DOWN -> {
-                Toast.makeText(applicationContext,"터치를 클릭하였습니다.", Toast.LENGTH_SHORT).show()
-                Log.d("MainActivity3", "터치를 클릭 x = ${event?.x} rawx = ${event?.rawX}" + "y = ${event?.y} rawy = ${event?.rawY}")
+    override fun onCheckedChanged(buttonView: CompoundButton?, isChecked: Boolean) {
+        when(buttonView?.id){
+            R.id.ckbClick -> {
+                Toast.makeText(applicationContext,"1번",Toast.LENGTH_SHORT).show()
             }
-            MotionEvent.ACTION_UP -> {
-                Toast.makeText(applicationContext,"터치를 클릭해제했습니다.", Toast.LENGTH_SHORT).show()
-                Log.d("MainActivity3", "터치를 클릭해제했습니다.")
-            }
+            R.id.ckbClick2 -> {
+                Toast.makeText(applicationContext,"2번",Toast.LENGTH_SHORT).show()
+            }else -> null
         }
-        return super.onTouchEvent(event)
     }
+
+
 }
