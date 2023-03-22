@@ -1,11 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">AndroidFirst</string>
     <string name="app_btn1">클릭하기</string>
     <string name="app_btn2">보이지않기</string>
     <string name="app_btn3">사라지기</string>
+    <string name="app_btnok">보이기</string>
     <string name="app_ellips">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean a dolor eget eros ultrices rutrum ac in dui. Morbi eu.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean a dolor eget eros ultrices rutrum ac in dui. Morbi eu.</string>
     <string name="app_message1">회원님의 소중한 정보 보호를 위해, 카카오계정의 현재 비밀번호를 확인해주세요</string>
     <string name="app_message2">비밀번호가 기억나지 않으신가요?</string>
     <string name="app_message3">비밀번호</string>
-    <string name="app_btnok">확인</string>
+    <string name="app_btn_start">START</string>
+    <string name="app_btn_stop">STOP</string>
+    <string name="app_btn_reset">RESET</string>
+    <string name="app_btn_back">Click for less than 3 seconds</string>
+    <string name="txt_status">상태메세지</string>
 </resources>
